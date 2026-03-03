@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ICT Project | 3rd Quarter</title>
+
+<!-- Google Font: Nunito -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+
+<style>
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #ddffb9; 
+        background-image: url(foot.png);
+        background-size: cover;
+    }
+
+    nav {
+        background-color: #698d46; 
+    }
+
+    .navbar-brand,
+    .nav-link {
+        font-weight: 600;
+    }
+
+    .nav-link.active {
+        color: #e5ffeb !important;
+    }
+
+    #top {
+        width: 520px;
+        height: 550px;
+        background: #51b256; 
+        margin: 50px auto;
+        border-radius: 15px;
+        border: 2px solid #3eb23a;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+        display: block;
+        margin-top: 12px;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    select, button {
+        width: 100%;
+        margin-top: 6px;
+        border-radius: 8px;
+        padding: 6px;
+        border: 1px solid #c0d9a5;
+    }
+
+    h3 {
+        color: #000000;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    button {
+        background-color: #84c96a; 
+        color: #fff;
+        border: none;
+        margin-top: 15px;
+        font-weight: 600;
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #abd0a4;
+        transform: scale(1.03);
+    }
+
+    #output {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #output img {
+        width: 80px;
+        margin-top: 10px;
+    }
+
+    #output-text {
+        font-weight: 700;
+        color: #000000;
+    }
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="fa-solid fa-graduation-cap"></i> INTRAMURALS SY:25-26        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="page2.html">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Team Checker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page3.html">Players</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" id="top">
+    <h3>Sign Up</h3>
+
+    <label>Have you registered online?</label>
+    <input type="radio" name="reg" value="yes"> Yes
+    <input type="radio" name="reg" value="no"> No
+
+    <label>Do you have medical clearance?</label>
+    <input type="radio" name="med" value="yes"> Yes
+    <input type="radio" name="med" value="no"> No
+
+    <label>Grade:</label>
+    <select id="grade">
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <label>Section:</label>
+    <select id="section">
+        <option value="sapphire">Sapphire</option>
+        <option value="ruby">Ruby</option>
+        <option value="emerald">Emerald</option>
+        <option value="topaz">Topaz</option>
+    </select>
+
+    <button py-click="check">Check Eligibility</button>
+
+    <div id="output">
+        <p id="output-text"></p>
+        <img id="output-img" src="">
+    </div>
+</div>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
